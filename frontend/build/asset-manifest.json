@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/DemonHacks-2020/static/css/main.edea50a5.chunk.css",
+    "main.js": "/DemonHacks-2020/static/js/main.10c96de1.chunk.js",
+    "main.js.map": "/DemonHacks-2020/static/js/main.10c96de1.chunk.js.map",
+    "runtime-main.js": "/DemonHacks-2020/static/js/runtime-main.c2de6df4.js",
+    "runtime-main.js.map": "/DemonHacks-2020/static/js/runtime-main.c2de6df4.js.map",
+    "static/js/2.fe351c3e.chunk.js": "/DemonHacks-2020/static/js/2.fe351c3e.chunk.js",
+    "static/js/2.fe351c3e.chunk.js.map": "/DemonHacks-2020/static/js/2.fe351c3e.chunk.js.map",
+    "static/js/3.9318d0f3.chunk.js": "/DemonHacks-2020/static/js/3.9318d0f3.chunk.js",
+    "static/js/3.9318d0f3.chunk.js.map": "/DemonHacks-2020/static/js/3.9318d0f3.chunk.js.map",
+    "index.html": "/DemonHacks-2020/index.html",
+    "static/css/main.edea50a5.chunk.css.map": "/DemonHacks-2020/static/css/main.edea50a5.chunk.css.map",
+    "static/js/2.fe351c3e.chunk.js.LICENSE.txt": "/DemonHacks-2020/static/js/2.fe351c3e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2de6df4.js",
+    "static/js/2.fe351c3e.chunk.js",
+    "static/css/main.edea50a5.chunk.css",
+    "static/js/main.10c96de1.chunk.js"
+  ]
+}
