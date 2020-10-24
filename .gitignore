@@ -1,0 +1,13 @@
+**/node_modules/
+
+backend/models/initData/onet/
+
+frontend/src/components.d.ts
+frontend/www/
+
+services/**/data
+services/letsencrypt/
+
+docker/postgres/data/
+
+.DS_Store
