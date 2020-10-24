@@ -7,11 +7,11 @@ export class WelcomeMsg1 extends Component {
             <Spring
             from={{opacity: 1}}
             to={{opacity: 0}}
-            config={{duration: 2500}}
+            config={{duration: 3500}}
             >
                 {props => (
                     <div style={props}>
-                        <div style={namaste}>
+                        <div className="namaste">
                             <h1>Namaste</h1>
                         </div>
                     </div>
@@ -22,9 +22,9 @@ export class WelcomeMsg1 extends Component {
 }
 
 const namaste = {
-    background: 'steelblue',
+    background: 'gray',
     color: 'white',
-    padding: '1.5rem'
+    padding: '1.5rem',
 }
 
 export default WelcomeMsg1

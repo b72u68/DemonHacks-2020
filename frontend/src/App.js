@@ -1,26 +1,40 @@
-import React, {Component} from 'react';
+import React, { useState, Component } from 'react';
 import Button from 'react-bootstrap/Button'
 import SearchBox from './components/Searchbox';
 import WelcomeMsg1 from './components/WelcomeMsg1'
+import ReactTimeout from 'react-timeout'
 import './components/searchbox.css'
 import './components/button.css'
 import './App.css'
 
 
-
 class App extends Component{
-  constructor(){
-    super();
-    this.state= {
-      searchField: ''
-    }
-    
+  constructor(props){
+    super(props);
+    this.state = {
+      searchField: '',
+      visible: true,
+    };
+  }
+
+  handleClick(){
+    this.setState({
+      visible: false,
+    });
   }
   
   render() {
     return(
       <div className="App">
-        
+
+        <div
+        className={this.state.visible ? "test-visible" : "test-hidden"}
+        onClick={this.handleClick.bind(this)}
+        >
+          <WelcomeMsg1 />
+          <p>Click to begin</p>
+        </div>
+
         <header className="App-header">
 
           <div className="titles">
@@ -56,6 +70,8 @@ class App extends Component{
                   <Button type="button" className="btn--primary--solid" style={{height: '75px', width: '150px'}}>Intermediate</Button>
                   &nbsp;&nbsp;
                   <Button type="button" className="btn--primary--solid" style={{height: '75px', width: '150px'}}>Advanced</Button>
+                  &nbsp;&nbsp;
+                  <Button type="button" className="btn--primary--solid" style={{height: '75px', width: '150px'}}>All</Button>
                   </>
                 </div>
               </p>
@@ -69,4 +85,12 @@ class App extends Component{
 
 export default App;
 
-/*<WelcomeMsg1 />*/
+/*<WelcomeMsg1 />
+  <Modal1 />*/
+
+ /*
+        <Modal isOpen={true}>
+          <h2>Namaste</h2>
+          <p>Modal Body</p>
+        </Modal>
+        */
