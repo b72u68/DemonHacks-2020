@@ -1,6 +1,6 @@
 {
   "homepage": "http://aedwards4.github.io/DemonHacks-2020",
-  "name": "demon-hacks",
+  "name": "demonhacks-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
