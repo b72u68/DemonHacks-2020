@@ -1,0 +1,41 @@
+:root {
+  --primary: #a097da;
+  --warning: #ffd028;
+  --danger: #eb3f27;
+  --success: #75fa83;
+  --white: #fdfdfd;
+  --dark: #181717;
+}
+
+.btn {
+  font-family: "Prompt", sans-serif;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px 0 grey;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background-color: rgb(221, 199, 231);
+}
+
+/* Button Styles */
+
+.btn--primary--solid {
+  background-color: var(--primary);
+  color: var(--white);
+  border: 2px solid rgb(142, 120, 223);
+}
+
+.btn--primary--outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn--medium {
+  height: 40px;
+  font-size: 18px;
+}
