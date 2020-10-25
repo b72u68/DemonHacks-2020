@@ -10,9 +10,7 @@ export default class ExerciseCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: this.props.name,
-      description: this.props.description,
-      level: this.props.level,
+      exercise: this.props.exercise,
     };
   }
 
@@ -20,7 +18,7 @@ export default class ExerciseCard extends React.Component {
     var diffTagColor = "";
     var diffTagTextColor = "white";
 
-    switch (this.props.level) {
+    switch (this.state.exercise.level) {
       case "intermediate":
         diffTagColor = "#FFE761";
         diffTagTextColor = "#252A31";
@@ -37,9 +35,9 @@ export default class ExerciseCard extends React.Component {
         <CardActionArea>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h3">
-              {this.state.name}
+              {this.state.exercise.name}
             </Typography>
-            <Typography>{this.state.description}</Typography>
+            <Typography>{this.state.exercise.description}</Typography>
           </CardContent>
         </CardActionArea>
         <CardActions style={{ backgroundColor: "#EBEFF5" }}>
@@ -62,7 +60,7 @@ export default class ExerciseCard extends React.Component {
                 fontSize: "10",
               }}
             >
-              {this.state.level}
+              {this.state.exercise.level}
             </h5>
           </Button>
         </CardActions>
