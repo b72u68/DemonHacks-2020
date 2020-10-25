@@ -67,7 +67,7 @@ export default class DisplayExercises extends Component {
             </h1>
           </a>
         </div>
-        <div style={{ padding: "30px" }}>
+        <div style={{ paddingTop: "30px", paddingBottom: "30px" }}>
           <Grid
             container
             direction="row"
@@ -88,6 +88,11 @@ export default class DisplayExercises extends Component {
       </div>
     ) : (
       <div style={{ textAlign: "center", padding: "70px", fontSize: "25px" }}>
+        <a href="/" style={{ textDecoration: "none" }}>
+          <h1 className="App-title" style={{ margin: "0" }}>
+            coFIT
+          </h1>
+        </a>
         <p>Loading Exercises...</p>
       </div>
     );

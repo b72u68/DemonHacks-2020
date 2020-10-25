@@ -32,6 +32,7 @@ export default class Homepage extends Component {
   }
 
   handleChooseLevel(event) {
+    event.preventDefault();
     this.setState({
       page: 1,
       searchQuery: event.target.value,
