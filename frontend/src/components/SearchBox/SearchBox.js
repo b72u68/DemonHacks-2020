@@ -13,7 +13,7 @@ export default class SearchBox extends Component {
     };
   }
 
-  handleSubmit(event) {
+  async handleSubmit(event) {
     event.preventDefault();
     console.log(this.state.input);
   }

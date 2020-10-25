@@ -1,0 +1,19 @@
+{
+  "name": "cofit-backend",
+  "version": "1.0.0",
+  "description": "Backend server for DemonHacks project coFIT",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "csv-parser": "^2.3.3",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

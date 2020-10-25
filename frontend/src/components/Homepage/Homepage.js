@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
-import SearchBox from "../SearchBox/SearchBox";
+/*
+ *import SearchBox from "../SearchBox/SearchBox";
+ */
 import WelcomeMessage from "../WelcomeMessage/WelcomeMessage";
+import DisplayExercises from "../DisplayExercises/DisplayExercises";
 import "../Button/Button.css";
 import "./Homepage.css";
 
@@ -9,7 +12,10 @@ export default class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      page: 0,
       visible: true,
+      input: "",
+      searchQuery: "",
     };
   }
 
@@ -19,9 +25,33 @@ export default class Homepage extends Component {
     });
   }
 
+  handleChangeInput(event) {
+    this.setState({
+      input: event.target.value,
+    });
+  }
+
+  handleChooseLevel(event) {
+    this.setState({
+      page: 1,
+      searchQuery: event.target.value,
+    });
+  }
+
+  handleSubmitSearch(event) {
+    event.preventDefault();
+    this.setState({
+      page: 1,
+      searchQuery: this.state.input,
+    });
+  }
+
   render() {
     const exerciseLevels = ["Beginner", "Intermediate", "Advanced", "All"];
-    return (
+    const searchResult = (
+      <DisplayExercises searchQuery={this.state.searchQuery} />
+    );
+    const homepage = (
       <div className="Homepage">
         <div
           className={this.state.visible ? "test-visible" : "test-hidden"}
@@ -44,11 +74,24 @@ export default class Homepage extends Component {
                 <div className="Select-diff">
                   <h2>Search for an exercise:</h2>
                   <br></br>
-                  <SearchBox
-                    className="search--primary"
-                    value={this.state.searchField}
-                    placeholder={"Downward-Facing Dog..."}
-                  />
+                  <form onSubmit={this.handleSubmitSearch.bind(this)}>
+                    <input
+                      type="text"
+                      className="search"
+                      placeholder="Downward-Facing Dog..."
+                      onChange={this.handleChangeInput.bind(this)}
+                      style={{ height: "30px", width: "200px" }}
+                    />
+                    &nbsp;&nbsp;
+                    <Button
+                      type="submit"
+                      className="btn--primary--solid"
+                      style={{ height: "30px", width: "75px" }}
+                      onSubmit={this.handleSubmitSearch.bind(this)}
+                    >
+                      Search
+                    </Button>
+                  </form>
                 </div>
 
                 <br></br>
@@ -62,9 +105,11 @@ export default class Homepage extends Component {
                       <il style={{ display: "inline", padding: "5px" }}>
                         <Button
                           key={i}
+                          value={level}
                           type="button"
                           className="btn--primary--solid"
                           style={{ height: "75px", width: "150px" }}
+                          onClick={this.handleChooseLevel.bind(this)}
                         >
                           {level}
                         </Button>
@@ -78,5 +123,11 @@ export default class Homepage extends Component {
         </div>
       </div>
     );
+    switch (this.state.page) {
+      case 1:
+        return searchResult;
+      default:
+        return homepage;
+    }
   }
 }

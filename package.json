@@ -1,0 +1,26 @@
+{
+  "name": "cofit",
+  "version": "1.0.0",
+  "description": "coFIT Web",
+  "main": "index.js",
+  "scripts": {
+    "frontend:build": "npm --prefix=frontend run build",
+    "frontend:start:dev": "npm --prefix=frontend start",
+    "web:start": "npm run frontend:build && npm --prefix=backend start",
+    "web:start:dev": "concurrently \"npm run frontend:start:dev\" \"npm run backend:start:dev\"",
+    "backend:start:dev": "npm --prefix=backend run start:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b72u68/DemonHacks-2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b72u68/DemonHacks-2020/issues"
+  },
+  "homepage": "https://github.com/b72u68/DemonHacks-2020#readme",
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
